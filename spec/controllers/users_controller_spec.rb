@@ -90,6 +90,11 @@ describe UsersController do
   			post :create, :user => @attr
   			response.should render_template('new')
   		end
+  		
+  		it "should empty the password field" do
+  			post :create, :user => @attr
+				@attr[:password] == ""
+  		end
   	end
   	
   	describe "success" do

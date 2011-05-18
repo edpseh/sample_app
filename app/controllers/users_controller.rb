@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   	else
   		@title = "Sign up"
   		render 'new'
-  	end
+  		@user.password == ""
+   	end
   end
 
 end
